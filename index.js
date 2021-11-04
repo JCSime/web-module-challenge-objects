@@ -58,14 +58,20 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   discount : function(role){
-    if(role === "teacher"){
-      const discount_price = this.price - (this.price * 0.25)
+    if(role === "teacher" || role === "student"){
+      const discount_price = this.price - (this.price * 0.25);
       return discount_price;
+    } else if(role === "public"){
+      const discount_price = this.price - (this.price * 0.10);
+      return discount_price;
+    } else{
+      return "this isn't a valid role. Please choose between teacher, student, or public."
     }
   }
 }
 
-console.log(burger.discount("teacher"));
+// console.log(burger.discount("teacher"));
+console.log(burger.discount("student"));
 
 
 ///////////////Reviews (MVP)///////////////////
