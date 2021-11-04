@@ -141,7 +141,7 @@ function getReviewByIndex(arr, num) {
   return `${arr[num].name} gave the restaurant a ${arr[num].rating} star review, and their feedback was: ${arr[num].feedback}`
 }
 
-console.log(getReviewByIndex(reviews, 4));
+// console.log(getReviewByIndex(reviews, 4));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -156,9 +156,11 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(arr) {
+  const num = arr.length - 1;
+  return `${arr[num].name} gave the restaurant a ${arr[num].rating} star review, and their feedback was: ${arr[num].feedback}`;
 } 
+console.log(getLastReview(reviews));
 
 
 
